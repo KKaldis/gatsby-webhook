@@ -4,8 +4,23 @@
   "description": "Github Project Build (GatsbyJS + Wordpress headless CMS)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "Start Development": "SET NODE_ENV=development& nodemon index.js",
+    "Start Production": "SET NODE_ENV=production& nodemon index.js",
+    "Pretty Code": "prettier --write \"**/*.{js,jsx,json,css,scss,ts,tsx,md}\""
   },
   "author": "Kostas Kaldis",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.3"
+  },
+  "type": "module",
+  "engines": {
+    "node": "18.x"
+  }
 }
