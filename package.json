@@ -4,9 +4,9 @@
   "description": "Github Project Build (GatsbyJS + Wordpress headless CMS)",
   "main": "index.js",
   "scripts": {
-    "Start Development": "SET NODE_ENV=development& nodemon index.js",
-    "Start Production": "node index.js",
-    "Pretty Code": "prettier --write \"**/*.{js,jsx,json,css,scss,ts,tsx,md}\""
+    "development": "SET NODE_ENV=development& nodemon index.js",
+    "production": "node index.js",
+    "prettyCode": "prettier --write \"**/*.{js,jsx,json,css,scss,ts,tsx,md}\""
   },
   "author": "Kostas Kaldis",
   "license": "ISC",
