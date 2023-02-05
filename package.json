@@ -6,6 +6,7 @@
   "scripts": {
     "development": "SET NODE_ENV=development& nodemon index.js",
     "production": "node index.js",
+    "vercel": "tsc && node index.js",
     "prettyCode": "prettier --write \"**/*.{js,jsx,json,css,scss,ts,tsx,md}\""
   },
   "author": "Kostas Kaldis",
