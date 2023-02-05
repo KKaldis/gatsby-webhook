@@ -29,7 +29,7 @@ app.post("/build/:key", async (req, res) => {
 });
 
 app.get("/ping", (req, res) => {
-  res.send('DAY-ONE WEBSITE BUILD SERVICE RUNNING')
+  res.send('WEBSITE BUILD SERVICE RUNNING')
 });
 
 
