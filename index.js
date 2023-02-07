@@ -1,12 +1,12 @@
-import { Octokit } from "@octokit/rest";
-import express from "express";
-import chalk from "chalk";
-import dotenv from "dotenv";
+const express = require("express");
+const chalk = require("chalk");
+const dotenv = require("dotenv");
+const Octokit = require("@octokit/rest").Octokit;
 
 dotenv.config();
-
 const app = express();
 app.use(express.json());
+
 const { GITHUB_REPO, PORT, GITHUB_OWNER, GITHUB_TOKEN, NODE_ENV, GITHUB_WORKFLOW_ID, PASS_KEY } = process.env;
 const port = PORT || 3000;
 
