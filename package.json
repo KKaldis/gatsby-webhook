@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "development": "SET NODE_ENV=development& nodemon index.js",
-    "production": "SET NODE_ENV=production& node index.js && exit 1",
+    "production": "SET NODE_ENV=production& node index.js",
     "prettyCode": "prettier --write \"**/*.{js,jsx,json,css,scss,ts,tsx,md}\""
   },
   "author": "Kostas Kaldis",
