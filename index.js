@@ -1,13 +1,11 @@
 const express = require("express");
 const chalk = require("chalk");
 const dotenv = require("dotenv");
-const router = express.Router();
-const allowedOrigins = require("./data/sitesObjects").allowedOrigins;
+const { allowedOrigins } = require("./data/sitesObjects");
 
 dotenv.config();
 const app = express();
 app.use(express.json());
-console.log(allowedOrigins);
 
 const { PORT, NODE_ENV, APP_VERSION } = process.env;
 const port = PORT || 3000;
@@ -43,14 +41,9 @@ app.use("/espa", espa);
 const gatsby_build = require("./routes/gatsby_build");
 app.use("/gatsby_build", gatsby_build);
 
-//! 404
-router.get("*", function (req, res) {
-  res.send("404 - Nothing Here - 404", 404);
-});
-
 //! Test Point
 app.get("/ping", (req, res) => {
-  res.send(`SERVICE RUNNING ${APP_VERSION}`);
+  res.status(404).send(`SERVICE RUNNING ${APP_VERSION}`);
 });
 
 app.listen(port, () => {

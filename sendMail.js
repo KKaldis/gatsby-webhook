@@ -14,11 +14,11 @@ const sendMail = (data, html, res) => {
 
   smtpTransport.sendMail(mailOptions, (error, response) => {
     if (error) {
-      res.send(error);
+      res.status(500).send(error);
       console.log(error);
       // logger.error(error);
     } else {
-      res.send("Success");
+      res.status(200).send("Success");
       // logger.info("Success");
       console.log("Success");
     }
