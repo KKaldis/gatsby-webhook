@@ -2,7 +2,7 @@ const router = require("express").Router();
 const sendMail = require("../sendMail");
 
 router.post("/", (req, res) => {
-  let data = JSON.parse(req.body);
+  let data = req.body;
 
   const html = `<h3>Contact Information</h3>
     <ul>

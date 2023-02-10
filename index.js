@@ -3,12 +3,12 @@ const chalk = require("chalk");
 const dotenv = require("dotenv");
 const router = express.Router();
 const allowedOrigins = require("./data/sitesObjects").allowedOrigins;
-const siteConfigs = require('./data/sitesObjects').siteConfigs
 
 dotenv.config();
 const app = express();
 app.use(express.json());
-console.log(siteConfigs);
+console.log(allowedOrigins);
+
 const { PORT, NODE_ENV, APP_VERSION } = process.env;
 const port = PORT || 3000;
 

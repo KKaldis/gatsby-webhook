@@ -2,9 +2,9 @@ const sendMail = require("../sendMail");
 const router = require("express").Router();
 
 router.post("/", (req, res) => {
-    let data = JSON.parse(req.body);
+  let data = req.body;
 
-    const html = `<h3>Contact Information</h3>
+  const html = `<h3>Contact Information</h3>
     <ul>
       <li>First Name: ${data.fname}</li>
       <li>Last Name: ${data.lname}</li>
@@ -22,6 +22,6 @@ router.post("/", (req, res) => {
       <li>Promo Newsletter: ${data.newsletter} </li>
     </ul>
 `;
-    sendMail(data, html, res);
+  sendMail(data, html, res);
 });
 module.exports = router;

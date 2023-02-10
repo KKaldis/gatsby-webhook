@@ -1,9 +1,9 @@
 const nodemailer = require("nodemailer");
 const siteUsers = require("./data/sitesObjects").siteUsers;
-const siteConfigs = require("./data/sitesObjects").siteConfigs;
+const mailConfigs = require("./data/mailConfigs");
 
 const sendMail = (data, html, res) => {
-  let smtpTransport = nodemailer.createTransport(siteConfigs[data.site]);
+  let smtpTransport = nodemailer.createTransport(mailConfigs[data.site]);
 
   let mailOptions = {
     from: data.email,

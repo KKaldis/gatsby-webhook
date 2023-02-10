@@ -14,24 +14,26 @@ const {
   PASS_SUPER,
 } = process.env;
 
-const supervisor = {
-  host: HOST_SUPER,
-  port: PORT_SUPER,
-  secure: SECURE_SUPER,
-  auth: {
-    user: USER_SUPER,
-    pass: PASS_SUPER,
+const mailConfigs = {
+  supervisor: {
+    host: HOST_SUPER,
+    port: PORT_SUPER,
+    secure: SECURE_SUPER,
+    auth: {
+      user: USER_SUPER,
+      pass: PASS_SUPER,
+    },
+  },
+
+  dayone: {
+    host: HOST_DAYONE,
+    port: PORT_DAYONE,
+    secure: SECURE_DAYONE,
+    auth: {
+      user: USER_DAYONE,
+      pass: PASS_DAYONE,
+    },
   },
 };
 
-const dayone = {
-  host: HOST_DAYONE,
-  port: PORT_DAYONE,
-  secure: SECURE_DAYONE,
-  auth: {
-    user: USER_DAYONE,
-    pass: PASS_DAYONE,
-  },
-};
-
-module.exports = { supervisor, dayone };
+module.exports = mailConfigs;
