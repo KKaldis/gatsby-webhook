@@ -1,6 +1,6 @@
 {
   "name": "build-gatsby-webhook-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Github Project Build (GatsbyJS + Wordpress headless CMS)",
   "main": "index.js",
   "scripts": {
